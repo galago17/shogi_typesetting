@@ -1,0 +1,85 @@
+
+% Medium Sized Board Diagram
+\newcommand{\imgmed}[2]{
+\begin{center}
+	\Large{\textbf{#1}}
+	\newline
+	\begin{minipage}{\textwidth}
+		\centering
+		\includegraphics[scale=0.4]{#2}
+	\end{minipage}
+	\centering
+\end{center}
+}
+
+% Small Sized Board Diagram
+\newcommand{\imgsmall}[2]{
+	\begin{minipage}{\textwidth}
+		\hspace{1.25cm}\Large{\textbf{#1}}
+		\newline
+		\includegraphics[scale=0.28]{#2}
+	\end{minipage}
+}
+
+% Side by Side (2 column) Commentary
+\newcommand{\sidebyside}[2]{
+\begin{minipage}{\textwidth}
+\begin{multicols*}{2}
+\begin{minipage}{0.5\textwidth}
+#1
+\end{minipage}
+\columnbreak
+\nopagebreak
+\begin{minipage}{0.5\textwidth}
+	#2
+\end{minipage}
+\end{multicols*}
+\end{minipage}
+}
+
+% Title Size, centered, for captions
+\newcommand{\bfcenter}[1]{
+\centering
+\Large{\textbf{#1}}
+}
+
+% Unindented Paragraph with space afterwards, for use in Side by Side Commentary
+\newcommand{\colpara}[1]{
+\noindent#1\bigskip
+}
+
+\newcommand{\fullpage}[2]{
+	\begin{center}
+	{\fontsize{50}{60}\selectfont \textbf{#1}}
+	\vspace{1cm}
+	\includegraphics[scale=0.7]{#2}
+	\end{center}
+}
+
+% Tabular Moves
+\newcounter{movenumber}
+\newcommand{\movenumber}{\stepcounter{movenumber}\arabic{movenumber}}
+\newcommand{\cm}[2]{\movenumber & #1 & #2 \\}
+
+\newcommand{\sm}[1]{\movenumber & #1\\}
+
+% Annotated Game Env
+\newenvironment{chessmoves}
+{
+\Large
+\begin{tabular}{l l l}
+}
+{ 
+\end{tabular} 
+}
+
+\newenvironment{shogimoves}
+{
+\Large
+\begin{tabular}{l l}
+}
+{ 
+\end{tabular} 
+}
+
+
