@@ -36,12 +36,13 @@ This is another custom command. It generates an unindented paragraph, followed b
 ## Environments
 There are two custom environments in this set of macros. Both generate a table of moves: ``chessmoves`` generates chess-style movenumbering (1 move = 1 move by each player), \
 and ``shogimoves`` generates shogi-style numbering (1 move = 1 move by one player).
-Each environment has its own command to generate each move.
+Each environment has its own command to generate each move. 
+Both commands require stating the move number on which to start the count. However, the count will start on the number after the input number. Therefore, ``0`` must be inputted to start at 1.
 
 ### ``chessmoves``
 
 ``
-\begin{chessmoves}
+\begin{chessmoves}{0}
 \cm{Nf3}
 \end{chessmoves}
 ``
@@ -49,7 +50,7 @@ Each environment has its own command to generate each move.
 ### ``shogimoves``
 
 ``
-\begin{shogimoves}
+\begin{shogimoves}{26}
 \sm{G'22}
 \end{shogimoves}
 ``
