@@ -66,20 +66,20 @@
 
 
 % Annotated Game Env
-\newenvironment{chessmoves}
+\newenvironment{chessmoves}[1]
 {
 \Large
-\setcounter{movenumber}{0}
+\setcounter{movenumber}{#1}
 \begin{tabular}{l l l}
 }
 { 
 \end{tabular} 
 }
 
-\newenvironment{shogimoves}
+\newenvironment{shogimoves}[1]
 {
 \Large
-\setcounter{movenumber}{0}
+\setcounter{movenumber}{#1}
 \begin{tabular}{l l}
 }
 { 
